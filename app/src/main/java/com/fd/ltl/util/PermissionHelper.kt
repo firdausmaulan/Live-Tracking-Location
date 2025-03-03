@@ -1,7 +1,6 @@
 package com.fd.ltl.util
 
 import android.Manifest
-import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
 import androidx.activity.ComponentActivity
@@ -53,7 +52,7 @@ class PermissionHelper(
     /**
      * Checks if a specific permission is granted
      */
-    fun isPermissionGranted(permission: String): Boolean {
+    private fun isPermissionGranted(permission: String): Boolean {
         return ContextCompat.checkSelfPermission(activity, permission) ==
                 PackageManager.PERMISSION_GRANTED
     }
